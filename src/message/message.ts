@@ -19,6 +19,12 @@ export default class Message extends SuperComponent {
     multipleSlots: true,
   };
 
+  pageLifetimes = {
+    show() {
+      this.hideAll();
+    },
+  };
+
   // 组件的对外属性
   properties: MessageProps = { ...props } as unknown as MessageProps;
 
